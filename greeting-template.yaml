@@ -30,11 +30,11 @@ objects:
           containers:
           - command: [ "/bin/sh", "-c", "env" ]
             env:
-            name: SALUTI
-            valueFrom:
-              configMapKeyRef:
-                name: greeting-fe
-                key: SALUTI
+            - name: SALUTI
+              valueFrom:
+                configMapKeyRef:
+                  name: greeting-fe
+                  key: SALUTI
             image: ${APP_IMAGE}
             imagePullPolicy: Always
             name: greeting-fe
