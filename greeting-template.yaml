@@ -38,7 +38,7 @@ objects:
             imagePullPolicy: Always
             name: greeting-fe
             ports:
-              - containerPort: 8083
+              - containerPort: 8081
   - kind: Service
     apiVersion: v1
     metadata:
@@ -48,7 +48,7 @@ objects:
       namespace: app-inglese
     spec:
       ports:
-      - port: 8083
+      - port: 8081
       selector:
         app: greeting
   - kind: Route
