@@ -29,8 +29,8 @@ objects:
           serviceAccountName: pipeline
           containers:
           - env:
-            name: SALUTI
             command: [ "/bin/sh", "-c", "env" ]
+            name: SALUTI
             valueFrom:
               configMapKeyRef:
                 name: greeting-fe
