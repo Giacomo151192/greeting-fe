@@ -28,8 +28,7 @@ objects:
         spec:
           serviceAccountName: pipeline
           containers:
-          - command: [ "/bin/sh", "-c", "env" ]
-            env:
+          - env:
             - name: SALUTI
               valueFrom:
                 configMapKeyRef:
