@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   //@ts-ignore
-  saluti: window["env"]["apiUrl"] || "default"
+  saluti: window["env"].SALUTI || "default"
 };
