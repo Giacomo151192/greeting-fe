@@ -14,17 +14,16 @@ objects:
     metadata:
       name: greeting-fe
       labels:
-        app: greeting
-      namespace: app-inglese
+        app: greeting-fe
     spec:
       replicas: 1
       selector:
         matchLabels:
-          app: greeting
+          app: greeting-fe
       template:
         metadata:
           labels:
-            app: greeting
+            app: greeting-fe
         spec:
           serviceAccountName: pipeline
           containers:
@@ -44,20 +43,18 @@ objects:
     metadata:
       name: greeting-fe
       labels:
-        app: greeting
-      namespace: app-inglese
+        app: greeting-fe
     spec:
       ports:
       - port: 8081
       selector:
-        app: greeting
+        app: greeting-fe
   - kind: Route
     apiVersion: route.openshift.io/v1
     metadata:
       labels:
         app: greeting-fe
-      name: greeting-fe-route
-      namespace: app-inglese
+      name: greeting-fe
     spec:
       to:
         kind: Service
