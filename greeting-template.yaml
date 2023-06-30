@@ -29,6 +29,11 @@ objects:
           serviceAccountName: pipeline
           containers:
           - env:
+            name: SALUTI
+            valueFrom:
+              configMapKeyRef:
+                name: greeting-fe
+                key: SALUTI
             image: ${APP_IMAGE}
             imagePullPolicy: Always
             name: greeting-fe
