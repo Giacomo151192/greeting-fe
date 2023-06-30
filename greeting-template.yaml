@@ -30,7 +30,6 @@ objects:
           containers:
           - env:
             name: SALUTI
-            command: [ "/bin/sh", "-c", "env" ]
             valueFrom:
               configMapKeyRef:
                 name: greeting-fe
